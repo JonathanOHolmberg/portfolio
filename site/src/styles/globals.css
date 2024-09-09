@@ -5,14 +5,23 @@
   --c-accent: #ff6347;
 }
 
+/*CSS RESET*/
+
 *, *::after, *::before {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  border: 0;
 }
 
-html,
-body {
-  padding: 0;
-  margin: 0;
+/*HIDING SCROLLBARS*/
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 a {
@@ -276,7 +285,58 @@ a:hover:not([aria-disabled="true"]), a:focus-visible {
 main {
   height: 100vh;
   width: 100vw;
-  padding: 8vh 0 0 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+main > section {
+  min-height: 100vh;
+  width: 100vw;
+  padding: 0 1em;
+  gap: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1, h2, h3, h4, h5 {
+  text-wrap: balance;
+}
+
+h1 {
+  font-family: '__Inter_36bd41', sans-serif;
+  font-size: 8vw;
+  font-weight: 900;
+  line-height: 1.05;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h1:nth-child(3) {
+  font-size: 16vw;
+  line-height: 1.1;
+}
+
+h1 > span, h2 > span {
+  color: var(--c-accent);
+}
+
+h2 {
+  font-size: max(7vw, 1em);
+  font-weight: 800;
+  text-align: center;
+}
+
+p, figcaption, li {
+  max-width: 65ch;
+}
+
+p {
+  font-size: max(1.125vw, 12px);
+  font-weight: 300;
+  line-height: 1.77778;
+  overflow-wrap: normal;
 }
 
 footer {
