@@ -2,7 +2,7 @@
   --header-h: 8vh;
   --footer-h: 5vh;
 
-  --c-glass: rgba(0,0,0, 0.6);
+  --c-accent: #ff6347;
 }
 
 *, *::after, *::before {
@@ -22,6 +22,45 @@ a {
 
 html {
   color-scheme: light dark;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --c-bg: black;
+  --c-main: white;
+  --c-glass: rgba(0,0,0, 0.6);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --c-bg: white;
+  --c-main: black;
+  --c-glass: rgba(255,255,255, 0.6);
+}
+
+:root[data-color="#4361ee"] {
+  --c-accent: #4361ee;
+  --c-accent-70: #4361ee70;
+}
+
+:root[data-color="#2a9d8f"] {
+  --c-accent: #2a9d8f;
+  --c-accent-70: #2a9d8f70;
+}
+
+:root[data-color="#8cb369"] {
+  --c-accent: #8cb369;
+  --c-accent-70: #8cb36970;
+}
+
+:root[data-color="#f4a261"] {
+  --c-accent: #f4a261;
+  --c-accent-70: #f4a26170;
+}
+
+:root[data-color="#ff6347"] {
+  --c-accent: #ff6347;
+  --c-accent-70: #ff634770;
 }
 
 body {
@@ -66,7 +105,7 @@ header > a:hover > svg {
 
 header > a > svg > g > g[id] {
   transform-origin: bottom;
-  fill: black;
+  fill: var(--c-bg);
 }
 
 :root[data-nav="true"] g#fan-1 {
@@ -90,13 +129,13 @@ header > a > svg > g > g[id] {
 }
   
 :root[data-nav="true"] g#fan-5 {
-  fill: tomato;
+  fill: var(--c-accent);
   transform: rotate(0deg);
   transition: color transform 180ms ease-in;
 }
 
 :root[data-nav="true"] .nav-button:active > svg > g > g#fan-5 {
-  fill: tomato;
+  fill: var(--c-accent);
   transform: rotate(0deg);
   transition: color transform 180ms ease-in;
 }
@@ -127,7 +166,7 @@ header > a > svg > g > g[id] {
 }
 
 #topball, #midball, #botball {
-  fill: white;
+  fill: var(--c-bg);
 }
 
 :root[data-set="true"] #botball {
@@ -193,16 +232,16 @@ nav > a {
 }
 
 nav > a:hover {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--c-main);
 }
 
 nav > a:active {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--c-main);
 }
 
 nav > a[aria-disabled="true"] {
   opacity: 0.6;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--c-main);
   cursor: unset;
 }
 
@@ -216,14 +255,13 @@ a:hover:not([aria-disabled="true"]), a:focus-visible {
   position: absolute;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: end;
   align-items: end;
   transform: translateY(-44vh);
   padding: 0.5em 1em;
   opacity: 1;
   z-index: 3;
   gap: max(3vw, 0.66em);
-  border: 1px solid black;
   background-color: var(--c-glass);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
@@ -238,7 +276,6 @@ a:hover:not([aria-disabled="true"]), a:focus-visible {
 main {
   height: 100vh;
   width: 100vw;
-  border: 1px solid black;
   padding: 8vh 0 0 0;
 }
 
@@ -251,7 +288,6 @@ footer {
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   align-items: center;
-  border: 1px solid black;
   list-style-type: none;
   z-index: 4;
   background-color: var(--c-glass);
