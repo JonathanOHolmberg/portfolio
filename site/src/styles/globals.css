@@ -305,7 +305,6 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  font-family: '__Inter_36bd41', sans-serif;
   font-size: 8vw;
   font-weight: 900;
   line-height: 1.05;
@@ -329,7 +328,7 @@ h2 {
 }
 
 p, figcaption, li {
-  max-width: 65ch;
+  max-width: 70ch;
 }
 
 p {
@@ -337,6 +336,17 @@ p {
   font-weight: 300;
   line-height: 1.77778;
   overflow-wrap: normal;
+}
+
+button {
+  cursor: pointer;
+  line-break: strict;
+  text-transform: uppercase;
+  font-weight: 800;
+  padding: 1.5em 3em;
+  border-radius: 34px;
+  margin: 0 auto;
+  background-color: var(--c-accent);
 }
 
 footer {

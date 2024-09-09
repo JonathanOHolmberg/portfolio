@@ -1,6 +1,6 @@
 import { CheckToggleProps } from "@/config/types/ToggleProps";
 
-import "@/styles/components/Components/toggle.css"
+import "@/styles/components/Components/toggle.css";
 
 const CheckToggle: React.FC<CheckToggleProps> = ({ defaultValue, defaultIcon, toggleValue, toggleIcon, setValue, value }) => {
 

@@ -8,6 +8,7 @@ const settings = {
   set: { title: 'Settings', key: 'set', default: 'false', saveToLocalStorage: false, },
   theme: { title: 'Theme', key: 'theme', default: 'no item', saveToLocalStorage: true, },
   color: { title: 'Color', key: 'color', default: '#f44336', saveToLocalStorage: true, },
+  anim: { title: 'Animation', key: 'anim', default: 'no item', saveToLocalStorage: true, },
 }
 
 interface ThemeContextType {
@@ -15,6 +16,7 @@ interface ThemeContextType {
     set: { key: string, value: string, setValue: (newValue: string) => void },
     theme: { key: string, value: string, setValue: (newValue: string) => void; removeValue: () => void },
     color: { key: string, value: string, setValue: (newValue: string) => void; removeValue: () => void },
+    anim: { key: string, value: string, setValue: (newValue: string) => void; removeValue: () => void },
     loading: boolean,
 }
 
@@ -26,10 +28,11 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     const set = useThemeValue(settings.set.key, settings.set.default, settings.set.saveToLocalStorage);
     const theme = useThemeValue(settings.theme.key, settings.theme.default, settings.theme.saveToLocalStorage);
     const color = useThemeValue(settings.color.key, settings.color.default, settings.color.saveToLocalStorage);
+    const anim = useThemeValue(settings.anim.key, settings.anim.default, settings.anim.saveToLocalStorage);
     const loading = nav.loading || theme.loading || color.loading;
 
   return (
-    <ThemeContext.Provider value={{ nav, set, theme, color, loading }}>
+    <ThemeContext.Provider value={{ nav, set, theme, color, anim, loading }}>
       {children}
     </ThemeContext.Provider>
   );
