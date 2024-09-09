@@ -1,6 +1,8 @@
 :root {
   --header-h: 8vh;
   --footer-h: 5vh;
+
+  --c-glass: rgba(0,0,0, 0.6);
 }
 
 *, *::after, *::before {
@@ -18,6 +20,10 @@ a {
   text-decoration: none;
 }
 
+html {
+  color-scheme: light dark;
+}
+
 body {
   height: 100vh;
   width: 100vw;
@@ -26,12 +32,27 @@ body {
 
 header {
   height: var(--header-h);
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid black;
+  background-color: var(--c-glass);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   padding: 0 1em;
+  z-index: 4;
+  transition: transform .4s ease-in;
+}
+
+:root[data-set="true"] header {
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  transition: background-color .4s ease-out;
 }
 
 header > a > svg {
@@ -45,7 +66,7 @@ header > a:hover > svg {
 
 header > a > svg > g > g[id] {
   transform-origin: bottom;
-  fill: white;
+  fill: black;
 }
 
 :root[data-nav="true"] g#fan-1 {
@@ -150,12 +171,12 @@ nav {
   gap: max(3vw, 0.66em);
   opacity: 1;
   transition: transform .4s ease-in;
-  z-index: 4;
+  z-index: 5;
 }
 
 :root[data-nav="false"] nav {
   transform: translateY(-44vh);
-  transition: transform .6s ease-out;
+  transition: transform .4s ease-out;
 }
 
 nav > a {
@@ -172,16 +193,16 @@ nav > a {
 }
 
 nav > a:hover {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
 }
 
 nav > a:active {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
 }
 
 nav > a[aria-disabled="true"] {
   opacity: 0.6;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
   cursor: unset;
 }
 
@@ -199,15 +220,18 @@ a:hover:not([aria-disabled="true"]), a:focus-visible {
   align-items: center;
   transform: translateY(-44vh);
   opacity: 1;
-  transition: transform .4s ease-in;
-  z-index: 4;
+  z-index: 3;
   gap: max(3vw, 0.66em);
   border: 1px solid black;
+  background-color: var(--c-glass);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  transition: transform .4s ease-in;
 }
 
 :root[data-set="true"] .settings {
   transform: translateY(0);
-  transition: transform .6s ease-out;
+  transition: transform .4s ease-out;
 }
 
 main {
@@ -228,6 +252,9 @@ footer {
   border: 1px solid black;
   list-style-type: none;
   z-index: 4;
+  background-color: var(--c-glass);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 
