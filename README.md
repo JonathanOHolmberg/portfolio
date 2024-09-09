@@ -29,3 +29,60 @@ a blazing speed, documentation is scattered or outdated and the scope of everyth
 can be very challenging. Hopefully someone somewhere will stumble upon this repo or the site itself and possibly even steal or learn a thing or two.
 That is why I am using [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) - [more info here](https://choosealicense.com/licenses/cc0-1.0/)
 as the lisence for this repo, use whatever you find useful!
+
+## Setting up VSCodium
+
+I wanted to start from a place of 0 configuration, and evolve my setup when I either get frustrated with something or learn something new. I also made sure
+not to just copypaste things people smarter than me have done, and truly weigh the usefullness and necessity of tools I adopt. Regarding VSCodium that mainly
+consisted of hiding a bunch of things I dont need, creating my own snippets (more on that in the future) and learning essential [keyboard shortcuts](https://code.visualstudio.com/docs/getstarted/keybindings) and
+[Emmet](https://code.visualstudio.com/docs/editor/emmet) abbreviations.
+
+## Initial Commit
+
+After trying out a bunch of different setups, I landed on
+
+npm create t3-app@latest made by [Theo](https://t3.gg/), a [skater boy from California](https://www.youtube.com/watch?v=aWfYxg-Ypm4&t=86s&ab_channel=Programmersarealsohuman)
+To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+
+- [Documentation](https://create.t3.gg/)
+- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+
+The stack is quite lightweight as is, and omitting tRPC, auth, ORM (and Tailwind!) due to the nature of the project makes it even lighter.
+
+I decided to stick to vanilla CSS because of 3 1/2 reasons:
+
+1. Embracing the full chaos of default styling and learn more about css resets.
+2. Limiting the use of classes altogether, trying to write out more semantic HTML.
+3. Limiting my use of CSS modules to increase re-usability and smarter site and component structure.
+4. It's fun and looks a lot nicer.
+
+### Stack
+
+Next.js
+React
+Vanilla CSS
+
+### Filesize:
+
+301 699 704 bytes (**365,9 MB** on disk) for **19 908 items**.
+
+### Running locally:
+
+**Average**
+10 requests
+1.4 MB transferred
+6.5 MB resources
+Finish: 430 ms
+DOMContentLoaded: 164 ms
+Load: 420 ms
+
+### Deploying to Vercel
+[https://portfolio-bice-one-48.vercel.app/]
+
+**Average**
+11 requests
+164 kB transferred
+412 kB resources
+Finish: 473 ms
+DOMContentLoaded: 309 ms
+Load: 398 ms

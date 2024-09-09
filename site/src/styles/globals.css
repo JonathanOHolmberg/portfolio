@@ -238,6 +238,7 @@ main {
   height: 100vh;
   width: 100vw;
   border: 1px solid black;
+  padding: 8vh 0 0 0;
 }
 
 footer {
