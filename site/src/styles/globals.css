@@ -34,6 +34,20 @@ header {
   padding: 0 1em;
 }
 
+header > a > svg {
+  height: 5vh;
+  width: 5vh;
+}
+
+header > a > svg > g > g[id] {
+  transform-origin: bottom;
+  fill: white;
+}
+
+#topball, #midball, #botball {
+  fill: white;
+}
+
 main {
   height: 100vh;
   width: 100vw;
