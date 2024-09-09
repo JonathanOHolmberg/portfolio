@@ -1,8 +1,10 @@
+import Nav from "./Nav";
+
 const Header: React.FC = () => {
     
     return (
         <header>
-            
+           <Nav /> 
         </header>
     );
 }
