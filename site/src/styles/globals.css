@@ -217,8 +217,9 @@ a:hover:not([aria-disabled="true"]), a:focus-visible {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
   transform: translateY(-44vh);
+  padding: 0.5em 1em;
   opacity: 1;
   z-index: 3;
   gap: max(3vw, 0.66em);
