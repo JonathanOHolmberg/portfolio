@@ -2,19 +2,19 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 1em;
+    gap: 0.5em;
 }
 
 .toggle svg {
-    height: 20px;
-    width: 20px;
+    height: 16px;
+    width: 16px;
 }
 
 .switch {
     position: relative;
     display: inline-block;
     width: 45px;
-    height: 24px;
+    height: 20px;
 }
 
 .switch input {
@@ -24,7 +24,7 @@
 }
   
 .slider {
-    width: 45px;
+    width: 38px;
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -40,8 +40,8 @@
 .slider:before {
     position: absolute;
     content: "";
-    height: 20px;
-    width: 20px;
+    height: 16px;
+    width: 16px;
     left: 2px;
     bottom: 1px;
     border: 1px solid var(--c-main);
@@ -51,7 +51,7 @@
 }
 
 input:checked + .slider:before {
-    -webkit-transform: translateX(19px);
-    -ms-transform: translateX(19px);
-    transform: translateX(19px) rotate(90deg);
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px) rotate(90deg);
 }

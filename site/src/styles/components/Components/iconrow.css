@@ -1,15 +1,15 @@
 .icon-row {
     display: flex;
     gap: 0.66em;
-    padding: 0.2em 0.5em;
+    padding: 0.1em 0.5em;
     border: 1px solid var(--c-main);
     border-radius: 34px;
 }
 
 .icon-row a {
     cursor: pointer;
-    height: 16px;
-    width: 16px;
+    height: 14px;
+    width: 14px;
     border-radius: 50%;
     display: flex;
     justify-content: center;

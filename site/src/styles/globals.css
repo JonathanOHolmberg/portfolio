@@ -105,8 +105,8 @@ header {
 }
 
 header > a > svg {
-  height: 5vh;
-  width: 5vh;
+  height: max(3vh, 2vw);
+  width: max(3vh, 2vw);
 }
 
 header > a:hover > svg {
@@ -218,7 +218,7 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: max(3vw, 0.4em);
+  gap: max(3vw, 0.33em);
   opacity: 1;
   transition: transform .4s ease-in;
   z-index: 5;
@@ -239,7 +239,7 @@ nav > a {
   color: inherit;
   text-decoration: none;
   border-bottom: 1px solid transparent;
-  padding: 0 8em;
+  padding: 0 0.8em;
 }
 
 nav > a:hover {
@@ -330,7 +330,8 @@ h2 {
 }
 
 p, figcaption, li {
-  max-width: 70ch;
+  max-width: 80ch;
+  text-wrap: balance;
 }
 
 p {
