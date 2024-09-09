@@ -86,3 +86,39 @@ Load: 420 ms
 Finish: 473 ms
 DOMContentLoaded: 309 ms
 Load: 398 ms
+
+## Build steps
+
+### Site Container
+
+The main layout of the site will consist of a fixed header at the top with navigation, and a fixed footer at the bottom with external links.
+It's not the most original layout idea, but after iterating through some pretty wild alternatives I've probably committed a classic and tried
+to re-invent the wheel while trying to be creative. But my lapses in judgement will work as great material for the blog posts and works to come.
+
+### Dump the content
+
+*"Form follows function."*
+
+I've noticed it is considerably harder to build and design if you lack the content of the site (d'uh right?). Aside from the
+obvious (greatly expressed by the quote above), it's a lot easier to get trapped in (particularily CSS) rabbit holes that go nowhere.
+It also sucks a lot when you've built something very nice just to notice that adding in x or y breaks everything. So start out from
+the ugly basic site and build upwards, it will save you a lot of time.
+
+I started by dumping all of the existing content to the site and by writing my first blog post (!) to give context to what kind of
+content will populate this page. There would probably be a more elegant solution for creating the posts through JSON, but seeing how
+I might want to style the individual pages and add in components and other goodies in the future and jumping through hoops in the future
+seems like a bad idea compared to just writing out the pages. It might also end up in more high quality blog posts and content since they
+take a little extra effort.
+
+### Initial styles
+
+The initial styles should cover the most fundamental layout. Setting the structure for how the header, footer and other components that are visible
+is the first step. Adding in a second root file with all of your CSS variables is always a good idea, if you want to edit ex. the header height in the
+future, it only requires you to change the value once. Root values are great for managing "global state", where triggering data attributes will cause changes
+in the CSS (which nicely also supports animation) without doing the whole classList.add type stuff. I also know I am going to add quite a lot of CSS in the future,
+so splitting up the code to ex. component and page based CSS is good idea, while keeping only the truly global values in global.
+
+### Semantic HTML
+
+The mission while building the site is to use as little classes and "non-semantic" HTML as possible. And listen, I am going to repurpose some stuff from HTML
+that we don't use anymore (mainly tables). That might be seen as "wrong", but for me both <caption> and <summary> are great elements to use when writing a site. 
