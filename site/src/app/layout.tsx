@@ -1,6 +1,7 @@
 import { type Metadata } from "next";
 
 import "@/styles/globals.css";
+import Container from "@/components/Container";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -11,7 +12,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={""}>{children}</body>
+      <Container>
+        {children}
+      </Container>
     </html>
   );
 }
