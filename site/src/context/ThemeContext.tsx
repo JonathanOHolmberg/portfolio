@@ -4,7 +4,7 @@ import type { ReactNode } from 'react'
 import useThemeValue from '../hooks/useThemeValues'
 
 const settings = {
-  nav: { title: 'Menu', key: 'nav', default: 'true', saveToLocalStorage: true, },
+  nav: { title: 'Menu', key: 'nav', default: 'true', saveToLocalStorage: false, },
   set: { title: 'Settings', key: 'set', default: 'false', saveToLocalStorage: false, },
   theme: { title: 'Theme', key: 'theme', default: 'no item', saveToLocalStorage: true, },
   color: { title: 'Color', key: 'color', default: '#f44336', saveToLocalStorage: true, },

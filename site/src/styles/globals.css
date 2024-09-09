@@ -39,13 +39,104 @@ header > a > svg {
   width: 5vh;
 }
 
+header > a:hover > svg {
+  transform: scale(1.04);
+}
+
 header > a > svg > g > g[id] {
   transform-origin: bottom;
   fill: white;
 }
 
+:root[data-nav="true"] g#fan-1 {
+  transform: rotate(29deg) translateY(4px) translateX(-2px);
+  transition: transform 420ms ease-in;
+}
+  
+:root[data-nav="true"] g#fan-2 {
+  transform: rotate(30deg) translateY(4px) translateX(-2px);
+  transition: transform 360ms ease-in;
+}
+  
+:root[data-nav="true"] g#fan-3 {
+  transform: rotate(22deg) translateY(3px) translateX(-1px);
+  transition: transform 300ms ease-in;
+}
+  
+:root[data-nav="true"] g#fan-4 {
+  transform: rotate(7deg) translateY(1px);
+  transition: transform 240ms ease-in;
+}
+  
+:root[data-nav="true"] g#fan-5 {
+  fill: tomato;
+  transform: rotate(0deg);
+  transition: color transform 180ms ease-in;
+}
+
+:root[data-nav="true"] .nav-button:active > svg > g > g#fan-5 {
+  fill: tomato;
+  transform: rotate(0deg);
+  transition: color transform 180ms ease-in;
+}
+  
+:root:not([data-nav="true"]) g#fan-1, .nav-button:not(:hover) > svg > g > g#fan-1 {
+  transform: rotate(0deg) translateY(0) translateX(0);
+  transition: transform 420ms ease-out 0ms;
+}
+  
+:root:not([data-nav="true"]) g#fan-2, .nav-button:not(:hover) > svg > g > g#fan-2 {
+  transform: rotate(0deg) translateY(0) translateX(0);
+  transition: transform 360ms ease-out 60ms;
+}
+  
+:root:not([data-nav="true"]) g#fan-3, .nav-button:not(:hover) > svg > g > g#fan-3 {
+  transform: rotate(0deg) translateY(0) translateX(0);
+  transition: transform 300ms ease-out 120ms;
+}
+  
+:root:not([data-nav="true"]) g#fan-4, .nav-button:not(:hover) > svg > g > g#fan-4 {
+  transform: rotate(0deg) translateY(0) translateX(0);
+  transition: transform 240ms ease-out 180ms;
+}
+  
+:root:not([data-nav="true"]) g#fan-5, .nav-button:not(:hover) > svg > g > g#fan-5 {
+  transform: rotate(0deg);
+  transition: transform 180ms ease-out 240ms;
+}
+
 #topball, #midball, #botball {
   fill: white;
+}
+
+:root[data-set="true"] #botball {
+  transform: translateX(0.66vh);
+  transition: transform .4s ease-in;
+}
+
+:root[data-set="true"] #midball {
+  transform: translateX(-0.66vh);
+  transition: transform .4s ease-in;
+}
+
+:root[data-set="true"] #topball {
+  transform: translateX(0.66vh);
+  transition: transform .4s ease-in;
+}
+
+:root[data-set="false"] #botball {
+  transform: translateX(0);
+  transition: transform .4s ease-in;
+}
+
+:root[data-set="false"] #midball {
+  transform: translateX(0);
+  transition: transform .4s ease-in;
+}
+
+:root[data-set="false"] #topball {
+  transform: translateX(0);
+  transition: transform .4s ease-in;
 }
 
 nav {
