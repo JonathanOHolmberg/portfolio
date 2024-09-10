@@ -93,6 +93,7 @@ h1:nth-child(2) {
 
 .hero > summary,
 .hero > button {
+    opacity: 0;
     transform: translateY(44vh);
     animation: fadeFromBot 2s forwards;
 }
@@ -116,7 +117,52 @@ h1:nth-child(2) {
     }
 }
 
-/* Reduced Motion Media Query */
+.boxContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 100vh;
+}
+
+.box > section {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2em;
+}
+
+.box:nth-child(2) {
+    background-image: url(/Dandelion.png);
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 1s;
+    background-size: 100%;
+    min-height: 100vh;
+}
+
+.box > section > button {
+    opacity: 0;
+}
+
+.box[data-vis="true"] > section > button {
+    animation: fadeFromBot 2s forwards;
+    animation-delay: 1s;
+}
+
+.box > section > article {
+    transform: translateY(44vh);
+    opacity: 0;
+}
+
+.box[data-vis="true"] > section > article {
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 2s ease;
+}
+
 @media (prefers-reduced-motion: reduce) {
     h1:nth-child(1),
     h1:nth-child(2),
