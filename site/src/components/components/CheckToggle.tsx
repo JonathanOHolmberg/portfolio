@@ -1,4 +1,4 @@
-import { CheckToggleProps } from "@/config/types/ToggleProps";
+import type { CheckToggleProps } from "@/config/types/ToggleProps";
 
 import "@/styles/components/Components/toggle.css";
 

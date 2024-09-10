@@ -1,4 +1,4 @@
-import { AttrToggleProps } from "@/config/types/ToggleProps";
+import type { AttrToggleProps } from "@/config/types/ToggleProps";
 
 const AttrToggle: React.FC<AttrToggleProps> = ({ value, setValue, defaultValue, toggleValue, icon }) => {
 
