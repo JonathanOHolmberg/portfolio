@@ -133,14 +133,20 @@ h1:nth-child(2) {
     gap: 2em;
 }
 
-.box:nth-child(2) {
-    background-image: url(/Dandelion.png);
+main {
     object-fit: contain;
     background-repeat: no-repeat;
     background-position: center;
     transition: background-image 1s;
     background-size: 100%;
-    min-height: 100vh;
+}
+
+:root[data-theme="dark"] main {
+    background-image: url(/Zerotofive.png);
+}
+
+:root[data-theme="light"] main {
+    background-image: url(/Zerotofive-light.png);
 }
 
 .box > section > button {
