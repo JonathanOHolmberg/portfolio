@@ -330,11 +330,6 @@ h2 {
   text-align: center;
 }
 
-h3 {
-  text-transform: uppercase;
-  letter-spacing: 0.225rem;
-}
-
 p, figcaption, li {
   max-width: 80ch;
 }
