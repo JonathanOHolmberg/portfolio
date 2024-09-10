@@ -1,0 +1,52 @@
+main {
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 1s;
+    background-size: 100%;
+}
+
+img {
+    max-height: 80vw;
+    border-radius: 50%;
+    border: 5px solid var(--c-main);
+}
+
+h1 {
+    position: absolute;
+    bottom: 5vh;
+    left: 3vw;
+}
+
+.boxContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 50vh;
+}
+
+.box {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.box > section {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2em;
+}
+
+p {
+    padding: 1em;
+}
+
+#sheeps {
+    max-width: 20vw;
+}

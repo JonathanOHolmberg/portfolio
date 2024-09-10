@@ -133,22 +133,6 @@ h1:nth-child(2) {
     gap: 2em;
 }
 
-main {
-    object-fit: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: background-image 1s;
-    background-size: 100%;
-}
-
-:root[data-theme="dark"] main {
-    background-image: url(/Zerotofive.png);
-}
-
-:root[data-theme="light"] main {
-    background-image: url(/Zerotofive-light.png);
-}
-
 .box > section > button {
     opacity: 0;
 }
@@ -159,7 +143,7 @@ main {
 }
 
 .box > section > article {
-    transform: translateY(44vh);
+    transform: translateY(24vh);
     opacity: 0;
 }
 
