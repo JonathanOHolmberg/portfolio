@@ -35,7 +35,7 @@ const AboutContent: React.FC = () => {
       { id: 3, ratio: 0, ref: React.createRef<HTMLDivElement>(),
         content:  <>
                     <p>I thrive in environments where innovation and creativity are encouraged, and I am always looking for new ways to approach problems and find solutions that can benefit the greater good.</p>
-                    <p>I appreciate elegant, simple solutions. I appreciate going above and beyond, not because it’s possible but because it’s meaningful to the problem present.</p>
+                    <p>I appreciate elegant, simple solutions. I appreciate going above and beyond, not because it&apos;s possible but because it&apos;s meaningful to the problem present.</p>
                     <p>Form follows function.</p>
                     <p> My strong analytical, problem solving, visual and interpersonal skills make me confident in my ability to contribute effectively to (almost) any team.</p>
                   </>
