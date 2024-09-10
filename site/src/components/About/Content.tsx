@@ -42,7 +42,7 @@ const AboutContent: React.FC = () => {
       },
       { id: 4, ratio: 0, ref: React.createRef<HTMLDivElement>(),
         content:  <>
-                    <p>I've mainly worked with Javascript, Typescript, React, Next, AWS and Firebase. I've done some smaller projects in Python and worked with 3rd party tools such as Figma, Canva and Zapier.</p>
+                    <p>I&apos;ve mainly worked with Javascript, Typescript, React, Next, AWS and Firebase. I&apos;ve done some smaller projects in Python and worked with 3rd party tools such as Figma, Canva and Zapier.</p>
                     <p>I am always eager to learn new languages, frameworks and techniques, for example playing around with HTMX, CSS animations and semantic HTML.</p>
                   </>
       },
