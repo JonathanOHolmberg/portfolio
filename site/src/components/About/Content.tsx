@@ -20,7 +20,7 @@ const AboutContent: React.FC = () => {
         content:  <>
                     <p>My journey in web development started way back in 2008 while studying Graphic Design at Inveon in Porvoo, building websites with Flash and Adobe Dreamweaver until the restaurant and hospitality industry temporarily stole my heart.</p>
                     <p>I spent the next 12 years working in a large variety of different roles, until the pandemic hit and I started looking
-                    for work and landed at <a href="">Serviceform</a>, a start up company focusing on website conversion.</p>
+                    for work and landed at <a href="https://serviceform.com/">Serviceform</a>, a start up company focusing on website conversion.</p>
                     <p>Working in a start up is very hectic but also very rewarding, giving me a possibility to work with a myriad of different projects.</p>
                   </>
       },
@@ -49,7 +49,7 @@ const AboutContent: React.FC = () => {
       { id: 5, ratio: 0, ref: React.createRef<HTMLDivElement>(),
         content:  <>
                     <p>Aside from work and school my passion to learn also spills over to my personal life. I spend a lot of time watching videos essays, reading articles and documentation and doing deep dives on subjects such as
-                    the Intersection Observer API, WAI-ARIA and Web site accessibility or SVG's. I also like using things like the Fibonacci Sequence or the Golden Ratio while designing.</p>
+                    the Intersection Observer API, WAI-ARIA and Web site accessibility or SVG&apos;s. I also like using things like the Fibonacci Sequence or the Golden Ratio while designing.</p>
                      <p>While not staring at a computer screen I am most likely hanging out with my partner and our dogs, picking mushrooms, at the gym, taking care of sheep or on a yoga retreat.</p>
                      <img id="sheeps" src="/sheeps.png" alt="Sheep" />
                   </>
