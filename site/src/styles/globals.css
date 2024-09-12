@@ -106,8 +106,8 @@ header {
 }
 
 header > a > svg {
-  height: max(3vh, 2vw);
-  width: max(3vh, 2vw);
+  height: 5vh;
+  width: 5vh;
 }
 
 header > a:hover > svg {
@@ -255,6 +255,12 @@ nav > a[aria-disabled="true"] {
   opacity: 0.6;
   border-bottom: 1px solid var(--c-main);
   cursor: unset;
+}
+
+@media (max-width: 500px) {
+  nav > a[aria-disabled="true"] {
+    display: none;
+  }
 }
 
 a:hover:not([aria-disabled="true"]), a:focus-visible {

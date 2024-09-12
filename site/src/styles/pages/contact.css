@@ -1,3 +1,67 @@
 main {
     padding-top: 10vh;
+    height: fit-content;
+}
+
+main > section {
+    justify-content: start;
+}
+
+form {
+    width: max(30vw, 300px);
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-top: 2em;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea, select {
+    max-width: 100%;
+    border: 1px solid var(--c-main);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+legend {
+    text-align: center;
+    font-weight: 800;
+}
+
+legend, label {
+    text-transform: uppercase;
+    letter-spacing: 0.225rem;
+}
+
+input, textarea {
+    border: 1px solid var(--c-main);
+}
+  
+input:focus, textarea:focus {
+    border: 1px solid var(--c-main);
+}
+  
+input:user-valid, textarea:user-valid {
+    border: 1px solid greenyellow;
+}
+  
+input:user-invalid, textarea:user-invalid {
+    border: 1px solid tomato;
+}
+
+textarea {
+    resize: none;
+    min-height: 10vh;
+    width: 100%;
 }
