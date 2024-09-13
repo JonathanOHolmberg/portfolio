@@ -1,27 +1,36 @@
 "use client";
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 import '@/styles/pages/success.css';
 
 export default function Success(): JSX.Element {
   const router = useRouter();
+  const [countdown, setCountdown] = useState(3);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      router.push('/contact');
-    }, 3000);
+    const timer = setInterval(() => {
+      setCountdown((prevCount) => {
+        if (prevCount <= 1) {
+          clearInterval(timer);
+          router.push('/contact');
+          return 0;
+        }
+        return prevCount - 1;
+      });
+    }, 1000);
 
-    return () => clearTimeout(timer);
+    return () => clearInterval(timer);
   }, [router]);
 
-    return (
-        <main>
-            <span><h1>Form submitted!<span>.</span></h1></span>
-           <section>
-           Thank you! The form has been submitted successfully. We will reply to you soon!
-           <button onClick={() => router.push('/contact')}>Go back</button>
-           </section>
-        </main>
-    );
+  return (
+    <main>
+      <span><h1>Form submitted!</h1></span>
+      <section>
+        Thank you for your message! The form has been submitted successfully. I will reply back to you soon!
+        <small>Redirecting in <b>{countdown}</b> seconds...</small>
+        <button onClick={() => router.push('/contact')}>Go back</button>
+      </section>
+    </main>
+  );
 }

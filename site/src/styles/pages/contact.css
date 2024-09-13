@@ -22,22 +22,26 @@ form > div {
     position: relative;
 }
 
-label {
+label[for] {
     position: relative;
     top: 2em;
     left: 0.5em;
-    background-color: black;
+    background-color: var(--c-offbg);
     width: fit-content;
     padding: 0 0.3em;
     font-size: 0.8em;
-    font-weight: 800;
+    font-weight: 400;
+    color: var(--c-main);
 }
 
 input, textarea, select {
     max-width: 100%;
     border: 1px solid var(--c-main);
-    padding: 1em 0.5em 0.5em;
+    padding: 1em;
     border-radius: 5px;
+    font-family: '__Inter_36bd41', sans-serif;
+    font-weight: 200;
+    letter-spacing: 0.125rem;
 }
 
 select {
@@ -51,41 +55,28 @@ legend {
     font-weight: 800;
 }
 
-legend, label {
+legend, label[for] {
     text-transform: uppercase;
     letter-spacing: 0.225rem;
 }
 
 input, textarea {
-    border: 1px solid var(--c-main);
-}
-  
-input:-ms-input-placeholder, input::-webkit-input-placeholder, textarea:-ms-input-placeholder, textarea::-webkit-input-placeholder {
-    border: 1px solid var(--c-main);
-}
+    border: 3px solid transparent;
+    background-color: var(--c-offbg);
 
-input:-internal-autofill-selected {
-    border: 1px solid greenyellow;
-}
-
-input:-internal-autofill-selected:focus, input:-internal-autofill-selected:active {
-    border: 1px solid greenyellow;
-}
-
-input:focus, textarea:focus, input:active, textarea:active {
-    border: 1px solid var(--c-main);
-}
-  
-input:user-valid, textarea:user-valid, select:user-valid {
-    border: 1px solid greenyellow;
-}
-
-input:user-invalid, textarea:user-invalid, select:user-invalid {
-    border: 1px solid tomato;
 }
 
 textarea {
     resize: none;
     min-height: 10vh;
     width: 100%;
+}
+
+input[type=text]:focus-visible, textarea:focus-visible, input[type=email]:focus-visible {
+    border: 3px solid var(--c-main);
+    outline: none;
+}
+
+input[type=text]:user-invalid, textarea:user-invalid, input[type=email]:user-invalid {
+    border: 3px solid tomato;
 }
