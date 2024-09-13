@@ -19,12 +19,24 @@ form {
 form > div {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
-form input, form textarea, select {
+label {
+    position: relative;
+    top: 2em;
+    left: 0.5em;
+    background-color: black;
+    width: fit-content;
+    padding: 0 0.3em;
+    font-size: 0.8em;
+    font-weight: 800;
+}
+
+input, textarea, select {
     max-width: 100%;
     border: 1px solid var(--c-main);
-    padding: 0.5em 1em;
+    padding: 1em 0.5em 0.5em;
     border-radius: 5px;
 }
 
@@ -48,15 +60,27 @@ input, textarea {
     border: 1px solid var(--c-main);
 }
   
-input:focus, textarea:focus {
+input:-ms-input-placeholder, input::-webkit-input-placeholder, textarea:-ms-input-placeholder, textarea::-webkit-input-placeholder {
+    border: 1px solid var(--c-main);
+}
+
+input:-internal-autofill-selected {
+    border: 1px solid greenyellow;
+}
+
+input:-internal-autofill-selected:focus, input:-internal-autofill-selected:active {
+    border: 1px solid greenyellow;
+}
+
+input:focus, textarea:focus, input:active, textarea:active {
     border: 1px solid var(--c-main);
 }
   
-input:user-valid, textarea:user-valid {
+input:user-valid, textarea:user-valid, select:user-valid {
     border: 1px solid greenyellow;
 }
-  
-input:user-invalid, textarea:user-invalid {
+
+input:user-invalid, textarea:user-invalid, select:user-invalid {
     border: 1px solid tomato;
 }
 

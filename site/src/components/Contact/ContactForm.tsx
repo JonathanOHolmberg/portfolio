@@ -1,62 +1,37 @@
 "use client";
 
 import { useState } from "react";
-import type { FormEvent } from "react";
-  
-  const ContactForm: React.FC = () => {
-  
-    const [name, setName] = useState<string>("");
-    const [email, setEmail] = useState<string>("");
-    const [message, setMessage] = useState<string>("");
+
+const ContactForm = () => {
+
+    const [formState, setFormState] = useState<{
+        name: string;
+        email: string;
+        message: string;
+    }>({
+        name: '',
+        email: '',
+        message: '',
+    });
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormState(prev => ({ ...prev, [name]: value }));
+    };
     
-    
-    
-    const handleSubmission = (e: FormEvent) => {
-        e.preventDefault()
-        setName("");
-        setEmail("");
-        setMessage("");
-        console.log("jee")
-    }
-  
     return (
-    <form onSubmit={(e) => handleSubmission(e)}>
-        <label>
-            I&apos;m interested in
-        </label>
-        <select>
-            <option>Development</option>
-            <option>Digital Art</option>
-            <option>Other</option>
-        </select>
-        <label>Name *</label>
-        <input
-            name="name"
-            type="text"
-            autoComplete="name"
-            required
-            onChange={(e) => setName(e.target.value)}
-            value={name}
-            min={3} />
-        <label>Email *</label>
-        <input
-            name="email"
-            type="email"
-            autoComplete="email"
-            required 
-            onChange={(e) => setEmail(e.target.value)}
-            value={email} />
-        <label>Message *</label>
-        <textarea
-            name="message"
-            autoComplete="off"
-            required
-            onChange={(e) => setMessage(e.target.value)}
-            value={message}
-            minLength={3} />
-        <button>Submit</button>
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_W3FORMS_ACCESS_KEY} />
+      <label htmlFor="name">Name *</label>
+      <input type="text" name="name" value={formState.name} onChange={handleChange} required min={3} autoComplete="name" />
+      <label htmlFor="email">Email *</label>
+      <input type="email" name="email" value={formState.email} onChange={handleChange} required autoComplete="email" />
+      <label htmlFor="message">Message *</label>
+      <textarea name="message" value={formState.message} onChange={handleChange} required minLength={3} autoComplete="off" />
+      <input type="hidden" name="redirect" value="http://localhost:3000/contact/success" />
+      <button type="submit">Submit Form</button>
     </form>
-    );
-  };
-  
-  export default ContactForm;
+  );
+};
+
+export default ContactForm;
