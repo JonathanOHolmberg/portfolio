@@ -1,0 +1,115 @@
+.grid {
+    padding-bottom: 10vh;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30vw, 1fr));
+    gap: 20px;
+    counter-reset: item-counter;
+}
+
+.grid li {
+    list-style: none;
+}
+
+.grid-item-header h3 > span {
+    color: var(--c-accent);
+    display: flex;
+    gap: 0.5vw;
+    font-weight: 900;
+    flex-direction: row;
+    align-items: start;
+}
+
+.grid li span h3 span::before {
+    content: attr(data-id);
+    color: var(--c-main);
+    font-size: max(3vw, 0.66rem);
+}
+
+.grid-item {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+    border: 1px solid var(--c-main-10);
+    min-width: 28vw;
+    min-height: 35vw;
+    z-index: 2;
+    background-color: var(--c-glass);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    touch-action: manipulation;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.grid-item:hover img,
+.grid-item:active img {
+    filter: brightness(0.5);
+    zoom: 0.83;
+    height: 70%;
+    transition: height 0.4s ease, zoom 0.5s ease, filter 0.5s ease;
+}
+
+.featured {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    min-width: 93vw;
+    height: 50vh;
+}
+
+.featured img {
+    height: 80%;
+    width: 100%;
+    object-position: center;
+}
+
+.featured:hover img,
+.featured:active img {
+    filter: brightness(0.5);
+    zoom: 0.83;
+    height: 70%;
+    transition: height 0.4s ease, zoom 0.5s ease, filter 0.5s ease;
+}
+
+.grid-item-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1vw;
+    height: 20%;
+}
+
+.grid-item-header a {
+    display: flex;
+    padding: 0.8vw;
+    background-color: var(--c-accent);
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--c-main);
+}
+
+.grid-item-header h3 {
+    display: flex;
+    flex-direction: column;
+    font-size: max(1.5vw, 0.2rem);
+    text-transform: uppercase;
+    letter-spacing: 0.225em;
+}
+
+.grid-item-header h3 > span {
+    color: var(--c-accent);
+    font-size: max(3vw, 0.6rem);
+}
+
+.grid-item-header a > svg {
+    width: max(3vw, 0.8rem);
+    height: max(3vw, 0.8rem);
+}

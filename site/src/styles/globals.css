@@ -39,6 +39,7 @@ html {
   --c-bg: black;
   --c-offbg: #17191e;
   --c-main: white;
+  --c-main-10: #ffffff10;
   --c-glass: rgba(0,0,0, 0.6);
 }
 
@@ -47,6 +48,7 @@ html {
   --c-bg: white;
   --c-offbg: #fafafa;
   --c-main: black;
+  --c-main-10: #00000010;
   --c-glass: rgba(255,255,255, 0.6);
 }
 

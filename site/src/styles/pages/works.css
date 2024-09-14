@@ -1,0 +1,28 @@
+main {
+    display: grid;
+}
+
+main > span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    max-width: max(10vw, 5rem);
+}
+
+main > span > h1 {
+    font-size: max(13vw, 8rem);
+    letter-spacing: 0.125em;
+}
+
+.grid {
+    padding-top: 10vh;
+    padding-left: max(7vw, 4rem);
+}
