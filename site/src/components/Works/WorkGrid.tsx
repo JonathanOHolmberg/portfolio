@@ -56,7 +56,7 @@ const mockWorks: Work[] = [
     type: null,
     title: "TYPOGRAPHY",
     description: "Playing with numbers.",
-    imageUrl: "https://via.placeholder.com/800x400",
+    imageUrl: "/Zerotofive.svg",
     timestamp: "2023-04-15",
     link: "https://example.com/featured"
   },

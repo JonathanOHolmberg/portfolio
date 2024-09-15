@@ -49,13 +49,27 @@
     margin: 0 auto;
 }
 
-.grid-item:hover img,
-.grid-item:active img {
+.grid-item:hover img {
     filter: brightness(0.5);
     zoom: 0.83;
-    height: 70%;
+    height: 65%;
     transition: height 0.4s ease, zoom 0.5s ease, filter 0.5s ease;
 }
+
+@media (hover: none) {
+    .grid-item:active img {
+        filter: brightness(0.5);
+        zoom: 0.83;
+        height: 60%;
+        transition: height 0.4s ease, zoom 0.5s ease, filter 0.5s ease;
+    }
+    .featured:active img {
+        filter: brightness(0.5);
+        zoom: 0.83;
+        height: 60%;
+        transition: height 0.4s ease, zoom 0.5s ease, filter 0.5s ease;
+    }
+  }
 
 .featured {
     grid-column: 1 / -1;
@@ -70,11 +84,10 @@
     object-position: center;
 }
 
-.featured:hover img,
-.featured:active img {
+.featured:hover img {
     filter: brightness(0.5);
     zoom: 0.83;
-    height: 70%;
+    height: 65%;
     transition: height 0.4s ease, zoom 0.5s ease, filter 0.5s ease;
 }
 

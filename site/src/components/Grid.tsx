@@ -30,8 +30,8 @@ const Grid: React.FC<GridProps> = ({ items, icon }) => {
                                 {icon}
                             </a>
                         </span>
-                        <p>{item.description}</p>
-                        <span>{item.timestamp}</span>
+                        <small>{item.description}</small>
+                        <small>{item.timestamp}</small>
                     </li>
             )).reverse()}
         </div>
